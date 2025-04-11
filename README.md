@@ -2,7 +2,7 @@
 Backstory Generator is a microservice that generates immersive, lore-rich character backstories using a fine‑tuned language model.
 The model was fine‑tuned in an unsupervised manner using narrative text from the public dataset baebee/Little-Literature. 
 The project exposes a FastAPI interface (with a web UI and API endpoints) so that prompts can be submitted and backstories are returned.
-![UI Screenshot](/Screenshot 2025-04-11 213357.png)
+![UI Screenshot](/ui.png)
 # Table of Contents
 
 - [What It Does](#what-it-does)
@@ -158,5 +158,5 @@ Containerize the application using Docker and set up CI/CD pipelines for seamles
 Additional API Features:
 Add endpoints for logging requests, error handling, and possibly a dashboard for model metrics.
 # Screenshots
-
+![example Screenshot](/example.png)
 
