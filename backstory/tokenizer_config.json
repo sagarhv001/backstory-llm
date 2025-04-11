@@ -1,0 +1,105 @@
+{
+  "add_prefix_space": false,
+  "added_tokens_decoder": {
+    "50256": {
+      "content": "<|endoftext|>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "50257": {
+      "content": "<BOS>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "50258": {
+      "content": "<EOS>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "50259": {
+      "content": "<PAD>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "50260": {
+      "content": "<superhero>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "50261": {
+      "content": "<action>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "50262": {
+      "content": "<drama>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "50263": {
+      "content": "<thriller>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "50264": {
+      "content": "<horror>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "50265": {
+      "content": "<sci_fi>",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    }
+  },
+  "additional_special_tokens": [
+    "<superhero>",
+    "<action>",
+    "<drama>",
+    "<thriller>",
+    "<horror>",
+    "<sci_fi>"
+  ],
+  "bos_token": "<BOS>",
+  "clean_up_tokenization_spaces": false,
+  "eos_token": "<EOS>",
+  "extra_special_tokens": {},
+  "max_length": 512,
+  "model_max_length": 1024,
+  "pad_token": "<EOS>",
+  "stride": 0,
+  "tokenizer_class": "GPT2Tokenizer",
+  "truncation_side": "right",
+  "truncation_strategy": "longest_first",
+  "unk_token": "<|endoftext|>"
+}

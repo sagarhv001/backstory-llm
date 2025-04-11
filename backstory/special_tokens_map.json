@@ -1,0 +1,32 @@
+{
+  "additional_special_tokens": [
+    "<superhero>",
+    "<action>",
+    "<drama>",
+    "<thriller>",
+    "<horror>",
+    "<sci_fi>"
+  ],
+  "bos_token": {
+    "content": "<BOS>",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "eos_token": {
+    "content": "<EOS>",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "pad_token": "<EOS>",
+  "unk_token": {
+    "content": "<|endoftext|>",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  }
+}

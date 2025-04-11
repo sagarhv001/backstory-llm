@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Backstory Chat</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <div id="chat-box">
+        <div class="chat-title">🕹️ Game Backstory Generator</div>
+        <div id="messages"></div>
+        <form id="chat-form">
+            <input type="text" id="name" name="name" placeholder="Enter character name..." required />
+            <textarea id="description" name="description" placeholder="Enter character description..." rows="3" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById("chat-form");
+        const messagesDiv = document.getElementById("messages");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const description = document.getElementById("description").value.trim();
+            if (!name || !description) return;
+
+            messagesDiv.innerHTML += `<div class="user-msg"><b>${name}</b>: ${description}</div>`;
+            document.getElementById("name").value = "";
+            document.getElementById("description").value = "";
+
+            const res = await fetch("/api/generate", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: `name=${encodeURIComponent(name)}&description=${encodeURIComponent(description)}`
+            });
+
+            const data = await res.json();
+            const responseText = data.backstory || data.response;
+
+            let aiMsgDiv = document.createElement("div");
+            aiMsgDiv.className = "ai-msg";
+            messagesDiv.appendChild(aiMsgDiv);
+
+            let currentText = "";
+            for (let i = 0; i < responseText.length; i++) {
+                currentText += responseText[i];
+                aiMsgDiv.innerText = currentText;
+                await new Promise(resolve => setTimeout(resolve, 5));
+            }
+
+
+            if (lastSentenceEnd > 0) {
+                const fullSentence = responseText.slice(0, lastSentenceEnd);
+                document.querySelector(".ai-msg").innerText = fullSentence;
+            }
+        });
+    </script>
+</body>
+</html>
