@@ -47,16 +47,25 @@ Instead of training on explicit prompt–completion pairs, the model was trained
 
 File Structure
 
-                  backstory-generator/
+                  backstory-llm/
                   ├── app.py                   # FastAPI application exposing /generate and /status endpoints
                   ├── templates/               
                   │   └── form.html            # HTML/Jinja2 template for the web UI
                   ├── static/                  
                   │   └── styles.css           # CSS file for UI styling
-                  ├── model/                   
-                  │   └── backstory/           # Directory containing the fine-tuned model files 
-                  ├── notebooks/               
-                  │   └── training_notebook.ipynb  # Notebook for data preprocessing and fine-tuning
+                  |   └── chat.js 
+                  ├── backstory/               # Directory containing the fine-tuned model files        
+                  │   └── added_tokens.json 
+                  │   └── config.json
+                  │   └── generation_config.json
+                  │   └── merges.txt
+                  │   └── model.safetensors
+                  │   └── special_tokens_map.json
+                  │   └── tokenizer.json
+                  │   └── tokenizer_config.json
+                  │   └── training_args.bin
+                  │   └── vocab.json
+                  ├── game-backstory.ipynb/    # Notebook for data preprocessing and fine-tuning           
                   ├── requirements.txt         # Python dependency file (see below)
                   └── README.md                # This README file
 
@@ -66,7 +75,7 @@ Clone the Repository
 
 bash
 
-                  git clone https://github.com/yourusername/backstory-generator.git
+                  git clone https://github.com/sagarhv001/backstory-llm.git
                   cd backstory-generator
 Install Dependencies
 
@@ -83,7 +92,7 @@ Launch the API with Uvicorn:
 
 bash
       
-                  uvicorn app:app --reload
+                  uvicorn app1:app --reload
                   
 The server will run at http://localhost:8000.
 
