@@ -5,27 +5,18 @@ The project exposes a FastAPI interface (with a web UI and API endpoints) so tha
 
 # Table of Contents
 
-                  What It Does
-                  
-                  File Structure
-                  
-                  How to Run
-                  
-                  Dataset Source & Processing
-                  
-                  Sample Input/Output
-                  
-                  Requirements
-                  
-                  Future Improvements
-                  
-                  Demo & Screenshots
-                  
-                  License
-                  
-                  Contact
+- [What It Does](#what-it-does)
+- [File Structure](#file-structure)
+- [How to Run](#how-to-run)
+- [Dataset Source & Processing](#dataset-source--processing)
+- [Sample Input/Output](#sample-inputoutput)
+- [Requirements](#requirements)
+- [Future Improvements](#future-improvements)
+- [Demo & Screenshots](#demo--screenshots)
+- [License](#license)
+- [Contact](#contact)
 
-What It Does
+# What It Does
 Generates Narrative Backstories:
 The service uses a fine‑tuned DistilGPT‑2 model (named “backstory”) that has learned from a curated corpus of narrative texts. It produces coherent and lore‑rich backstories for game characters.
 
@@ -45,7 +36,7 @@ A simple web UI (using Jinja2 templates with HTML/JS) that allows users to enter
 Unsupervised Fine-Tuning:
 Instead of training on explicit prompt–completion pairs, the model was trained on a large corpus of narrative texts (from baebee/Little-Literature), learning to continue text in a lore-rich style.
 
-File Structure
+# File Structure
 
                   backstory-llm/
                   ├── app.py                   # FastAPI application exposing /generate and /status endpoints
@@ -69,8 +60,8 @@ File Structure
                   ├── requirements.txt         # Python dependency file (see below)
                   └── README.md                # This README file
 
-How to Run
-Local Setup
+# How to Run
+## Local Setup
 Clone the Repository
 
 bash
@@ -115,14 +106,14 @@ bash
 
                   curl http://localhost:8000/status
 
-Dataset Source & Processing
-Source:
+# Dataset Source & Processing
+## Source:
 The model was fine‑tuned using the dataset baebee/Little-Literature available on Hugging Face.
 
-Processing:
+## Processing:
 The raw text was cleaned and divided into blocks, then used for unsupervised fine‑tuning. Data processing details (tokenization, grouping into fixed‑length sequences) are documented in the training notebook.
 
-Sample Input/Output
+## Sample Input/Output
 Example API Input
 Name: Kaylon
 Description: An empire of androids that killed their biological creators.
@@ -136,7 +127,7 @@ Description: An empire of androids that killed their biological creators.
                   Let go softlyCome gentlyMay take comfortFrom pain so dearWoven never let fallThis land awaits yetYet silenceSept unseenIs here residesLiving still
                   It sings 'a tale toldin existence form"Song sung singalongCrying soft touch between thoughtsWhich brings laughter
 
-Requirements
+# Requirements
 The project relies on the following Python packages:
 
 
@@ -150,7 +141,7 @@ The project relies on the following Python packages:
       accelerate
       aiofiles
       nest_asyncio
-What I’d Improve With More Time
+# What I’d Improve With More Time
 Data Quality and Volume:
 Further curate and expand the dataset with additional lore from gaming universes for richer, more context-aware generation.
 
