@@ -11,10 +11,8 @@ The project exposes a FastAPI interface (with a web UI and API endpoints) so tha
 - [Dataset Source & Processing](#dataset-source--processing)
 - [Sample Input/Output](#sample-inputoutput)
 - [Requirements](#requirements)
-- [Future Improvements](#future-improvements)
-- [Demo & Screenshots](#demo--screenshots)
-- [License](#license)
-- [Contact](#contact)
+- [What I’d Improve With More Time](#What-I'-d-Improve-With-More-Time)
+- [Screenshots](#Screenshots)
 
 # What It Does
 Generates Narrative Backstories:
@@ -159,3 +157,6 @@ Containerize the application using Docker and set up CI/CD pipelines for seamles
 
 Additional API Features:
 Add endpoints for logging requests, error handling, and possibly a dashboard for model metrics.
+# Screenshots
+
+
